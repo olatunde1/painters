@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painter's Palette - Choose Your State or Submit Service Request</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1, h2 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .state-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .state-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .state-button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin: 1em 0 0.5em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.7em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Painter's Palette LLC</h1>
+    </header>
+    <main>
+        <div id="stateSelection" class="state-selector">
+            <h2>Choose Your State</h2>
+            <!-- Here are all 50 states of the USA -->
+            <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
+            <button class="state-button" onclick="selectState('Alaska')">Alaska</button>
+            <button class="state-button" onclick="selectState('Arizona')">Arizona</button>
+            <button class="state-button" onclick="selectState('Arkansas')">Arkansas</button>
+            <button class="state-button" onclick="selectState('California')">California</button>
+            <button class="state-button" onclick="selectState('Colorado')">Colorado</button>
+            <button class="state-button" onclick="selectState('Connecticut')">Connecticut</button>
+            <button class="state-button" onclick="selectState('Delaware')">Delaware</button>
+            <button class="state-button" onclick="selectState('Florida')">Florida</button>
+            <button class="state-button" onclick="selectState('Georgia')">Georgia</button>
+            <button class="state-button" onclick="selectState('Hawaii')">Hawaii</button>
+            <button class="state-button" onclick="selectState('Idaho')">Idaho</button>
+            <button class="state-button" onclick="selectState('Illinois')">Illinois</button>
+            <button class="state-button" onclick="selectState('Indiana')">Indiana</button>
+            <button class="state-button" onclick="selectState('Iowa')">Iowa</button>
+            <button class="state-button" onclick="selectState('Kansas')">Kansas</button>
+            <button class="state-button" onclick="selectState('Kentucky')">Kentucky</button>
+            <button class="state-button" onclick="selectState('Louisiana')">Louisiana</button>
+            <button class="state-button" onclick="selectState('Maine')">Maine</button>
+            <button class="state-button" onclick="selectState('Maryland')">Maryland</button>
+            <button class="state-button" onclick="selectState('Massachusetts')">Massachusetts</button>
+            <button class="state-button" onclick="selectState('Michigan')">Michigan</button>
+            <button class="state-button" onclick="selectState('Minnesota')">Minnesota</button>
+            <button class="state-button" onclick="selectState('Mississippi')">Mississippi</button>
+            <button class="state-button" onclick="selectState('Missouri')">Missouri</button>
+            <button class="state-button" onclick="selectState('Montana')">Montana</button>
+            <button class="state-button" onclick="selectState('Nebraska')">Nebraska</button>
+            <button class="state-button" onclick="selectState('Nevada')">Nevada</button>
+            <button class="state-button" onclick="selectState('New Hampshire')">New Hampshire</button>
+            <button class="state-button" onclick="selectState('New Jersey')">New Jersey</button>
+            <button class="state-button" onclick="selectState('New Mexico')">New Mexico</button>
+            <button class="state-button" onclick="selectState('New York')">New York</button>
+            <button class="state-button" onclick="selectState('North Carolina')">North Carolina</button>
+            <button class="state-button" onclick="selectState('North Dakota')">North Dakota</button>
+            <button class="state-button" onclick="selectState('Ohio')">Ohio</button>
+            <button class="state-button" onclick="selectState('Oklahoma')">Oklahoma</button>
+            <button class="state-button" onclick="selectState('Oregon')">Oregon</button>
+            <button class="state-button" onclick="selectState('Pennsylvania')">Pennsylvania</button>
+            <button class="state-button" onclick="selectState('Rhode Island')">Rhode Island</button>
+            <button class="state-button" onclick="selectState('South Carolina')">South Carolina</button>
+            <button class="state-button" onclick="selectState('South Dakota')">South Dakota</button>
+            <button class="state-button" onclick="selectState('Tennessee')">Tennessee</button>
+            <button class="state-button" onclick="selectState('Texas')">Texas</button>
+            <button class="state-button" onclick="selectState('Utah')">Utah</button>
+            <button class="state-button" onclick="selectState('Vermont')">Vermont</button>
+            <button class="state-button" onclick="selectState('Virginia')">Virginia</button>
+            <button class="state-button" onclick="selectState('Washington')">Washington</button>
+            <button class="state-button" onclick="selectState('West Virginia')">West Virginia</button>
+            <button class="state-button" onclick="selectState('Wisconsin')">Wisconsin</button>
+            <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button>
+        </div>
+        <div id="serviceFormSection" class="hidden">
+            <form id="serviceForm" action="https://formsubmit.co/idowuolatunde32@gmail.com"  method="POST">
+                <input type="hidden" name="csrf_token" id="csrf_token" value="">
+                <input type="hidden" name="state" id="state" value="">
+
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="location">Location:</label>
+                <input type="text" id="location" name="location" placeholder="City" required>
+
+                <label for="serviceType">Type of Service:</label>
+                <select id="serviceType" name="serviceType" required>
+                    <option value="interior">Interior Painting</option>
+                    <option value="exterior">Exterior Painting</option>
+                    <option value="commercial">Commercial Painting</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" placeholder="Enter your budget in USD" min="0" step="100" required>
+
+                <label for="commencementDate">Project Commencement Date:</label>
+                <input type="date" id="commencementDate" name="commencementDate" required>
+
+                <label for="details">Details of the Job:</label>
+                <textarea id="details" name="details" required></textarea>
+
+                <button type="submit">Submit Request</button>
+
+                
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Painter's Palette LLC. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function selectState(state) {
+            document.getElementById('state').value = state;
+            document.getElementById('stateSelection').classList.add('hidden');
+            document.getElementById('serviceFormSection').classList.remove('hidden');
+        }
+
+        function generateCSRFToken() {
+            return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
+        }
+
+        document.getElementById('csrf_token').value = generateCSRFToken();
+        document.cookie = "csrf_token=" + encodeURIComponent(document.getElementById('csrf_token').value) + "; SameSite=Strict; HttpOnly; Secure";
+
+        // document.getElementById('serviceForm').addEventListener('submit', function(event) {
+        //     event.preventDefault();
+            
+        //     const formData = new FormData(this);
+        //     const data = {};
+        //     formData.forEach((value, key) => data[key] = value);
+
+        //     if (!data.name || !data.email || !data.location || !data.serviceType || !data.budget || !data.commencementDate || !data.details || !data.state) {
+        //         alert('Please fill in all fields');
+        //         return;
+        //     }
+
+        //     data.email = data.email.replace(/[^\w\s@.-]/gi, '');
+
+        //     console.log('Sending:', data);
+
+        //     // Here you would typically send this data to a server for processing
+        //     alert('Your request has been sent successfully!');
+        //     this.reset();
+        // });
+    </script>
+</body>
+</html>
