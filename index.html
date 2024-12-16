@@ -2,17 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
     <title>Todd Painting</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
         .poppins-thin {
-  font-family: "Poppins", sans-serif;
-  font-weight: 100;
-  font-style: normal;
-}
+            font-family: "Poppins", sans-serif;
+            font-weight: 100;
+            font-style: normal;
+          }
 
 .poppins-extralight {
   font-family: "Poppins", sans-serif;
@@ -224,16 +227,17 @@
     <main>
         <div id="stateSelection" class="state-selector">
             <h2>Choose Your State</h2>
-            <!-- <select name="" id="">
-                <option value="alabama" onchange="selectState('Alabama')">Alabama</option>
-                <option value="alabama" onchange="selectState('Arizona')">Arizona</option>
+
+            <select name="" id="actionSelect" onchange="displayAction()">
+                <option value="alabama" >Alabama</option>
+                <option value="alabama" >Arizona</option>
                 <option value="alabama">Arkansas</option>
                 <option value="alabama">Alaska</option>
                 <option value="alabama">California</option>
 
-            </select> -->
+            </select>
             <!-- Here are all 50 states of the USA -->
-            <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
+            <!-- <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
             <button class="state-button" onclick="selectState('Alaska')">Alaska</button>
             <button class="state-button" onclick="selectState('Arizona')">Arizona</button>
             <button class="state-button" onclick="selectState('Arkansas')">Arkansas</button>
@@ -282,7 +286,7 @@
             <button class="state-button" onclick="selectState('Washington')">Washington</button>
             <button class="state-button" onclick="selectState('West Virginia')">West Virginia</button>
             <button class="state-button" onclick="selectState('Wisconsin')">Wisconsin</button>
-            <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button>
+            <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button> -->
         </div>
         <div id="serviceFormSection" class="hidden">
             <form id="serviceForm" action="https://formsubmit.co/toddkoski@yahoo.com"  method="POST">
@@ -362,5 +366,15 @@
         //     this.reset();
         // });
     </script>
+
+<select id="mySelect" onchange="loadNextPage()">
+  <option value="page1.html">Page 1</option>
+  <option value="page2.html">Page 2</option>
+  <option value="page3.html">Page 3</option>
+</select>
+
+<div id="pageContainer"></div>
+
+    <script src="script.js"></script>
 </body>
 </html>
