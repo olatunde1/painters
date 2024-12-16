@@ -3,8 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Painter's Palette - Choose Your State or Submit Service Request</title>
+    <title>Todd Painting</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <style>
+        .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -96,10 +207,13 @@
             background-color: #333;
             color: white;
             text-align: center;
-            padding: 1em;
+            /* padding: 8px; */
             position: fixed;
             bottom: 0;
             width: 100%;
+            /* line-height: 16px; */
+            font-family:'Poppins',sans-serif;
+            font-size: smaller;
         }
     </style>
 </head>
@@ -110,6 +224,14 @@
     <main>
         <div id="stateSelection" class="state-selector">
             <h2>Choose Your State</h2>
+            <!-- <select name="" id="">
+                <option value="alabama" onchange="selectState('Alabama')">Alabama</option>
+                <option value="alabama" onchange="selectState('Arizona')">Arizona</option>
+                <option value="alabama">Arkansas</option>
+                <option value="alabama">Alaska</option>
+                <option value="alabama">California</option>
+
+            </select> -->
             <!-- Here are all 50 states of the USA -->
             <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
             <button class="state-button" onclick="selectState('Alaska')">Alaska</button>
@@ -163,7 +285,7 @@
             <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button>
         </div>
         <div id="serviceFormSection" class="hidden">
-            <form id="serviceForm" action="https://formsubmit.co/omojireogunlana@gmail.com"  method="POST">
+            <form id="serviceForm" action="https://formsubmit.co/toddkoski@yahoo.com"  method="POST">
                 <input type="hidden" name="csrf_token" id="csrf_token" value="">
                 <input type="hidden" name="state" id="state" value="">
 
@@ -200,7 +322,9 @@
         </div>
     </main>
     <footer>
-        <p>© 2024 Painter's Palette LLC. All rights reserved.</p>
+        <p>© 2024 Todd Painting LLC <br> 4584 Miller Rd Flint, MI 48507</p>
+        
+        
     </footer>
 
     <script>
