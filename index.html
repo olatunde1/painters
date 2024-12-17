@@ -133,7 +133,7 @@
             align-content: center;
             justify-content: center;
             /* width: 100vw; */
-            height: 40px;
+            height: 60px;
         }
 
         header img{
@@ -230,8 +230,11 @@
 </head>
 <body>
     <header>
-      <img src="/image/todd logo.jpg" alt="todd painting" height="50" width="50">
-        <h1 alt="todd painting">Todd Painting</h1>
+      <a href="index.html">
+        <img src="/image/todd logo.jpg" alt="todd painting" height="80" width="80">
+        <!-- <h1 alt="todd painting">Todd Painting</h1> -->
+      </a>
+    
     </header>
     <main>
         <div id="stateSelection" class="state-selector">
@@ -318,8 +321,11 @@
                     <option value="other">Other</option>
                 </select>
 
-                <label for="budget">Budget:</label>
-                <input type="number" id="budget" name="budget" placeholder="Enter your budget in USD" min="0" step="100" required>
+                <label for="budget">Phone no:</label>
+                <input type="tel" id="telephone" name="telehone" placeholder="Phone no" required>
+                
+                <label for="budget">Contact Time For Estimate</label>
+                <input type="text" id="estimate" name="estimate" placeholder="Contact time to get an Estimate"  required>
 
                 <label for="commencementDate">Project Commencement Date:</label>
                 <input type="date" id="commencementDate" name="commencementDate" required>
