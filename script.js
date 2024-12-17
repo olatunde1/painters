@@ -14,43 +14,52 @@
 // }
 
 
-// function displayAction() {
-//     const selectElement = document.getElementById("stateSelection");
-//     const selectedValue = selectElement.value;
+function selectState(state) {
+    document.getElementById('state').value = state;
+    document.getElementById('stateSelection').classList.add('hidden');
+    document.getElementById('serviceFormSection').classList.remove('hidden');
+}
 
-//     const actionDisplay = document.getElementById("actionDisplay");
+function generateCSRFToken() {
+    return Math.random().toString(36).substring(2) + Math.random().toString(36).substring(2);
+}
 
-//     switch (selectedValue) {
-//       case "option1":
-//         actionDisplay.textContent = "You selected Option 1. The next action is to...";
-//         break;
-//       case "option2":
-//         actionDisplay.textContent = "You selected Option 2. The next action is to...";
-//         break;
-//       case "option3":
-//         actionDisplay.textContent = "You selected Option 3. The next action is to...";
-//         break;
-//       default:
-//         actionDisplay.textContent = "Please select an option.";
+// document.getElementById('csrf_token').value = generateCSRFToken();
+// document.cookie = "csrf_token=" + encodeURIComponent(document.getElementById('csrf_token').value) + "; SameSite=Strict; HttpOnly; Secure";
+
+// document.getElementById('serviceForm').addEventListener('submit', function(event) {
+//     event.preventDefault();
+    
+//     const formData = new FormData(this);
+//     const data = {};
+//     formData.forEach((value, key) => data[key] = value);
+
+//     if (!data.name || !data.email || !data.location || !data.serviceType || !data.budget || !data.commencementDate || !data.details || !data.state) {
+//         alert('Please fill in all fields');
+//         return;
 //     }
-//   }
-function loadNextPage() {
-    const selectElement = document.getElementById("mySelect");
-    const selectedPage = selectElement.value;
-  
-    const pageContainer = document.getElementById("pageContainer");
-  
-    // Create a new XMLHttpRequest object to fetch the page
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', selectedPage, true);
-  
-    xhr.onload = function() {
-      if (xhr.status === 200) {
-        pageContainer.innerHTML = xhr.responseText;
-      } else {
-        console.error('Request failed.  Returned status of ' + xhr.status);
-      }
-    };
-  
-    xhr.send();
-  }
+
+//     data.email = data.email.replace(/[^\w\s@.-]/gi, '');
+
+//     console.log('Sending:', data);
+
+//     // Here you would typically send this data to a server for processing
+//     alert('Your request has been sent successfully!');
+//     this.reset();
+// });
+
+
+
+function submitAction() {
+    // Get the selected option value
+    const selectedPage = document.getElementById("actionSelect").value;
+
+    // Check if a valid page was selected
+    if (selectedPage) {
+        // Redirect to the selected page
+        window.location.href = selectedPage;
+    } else {
+        // Show an alert if no option was selected
+        alert("Please select an action from the dropdown.");
+    }
+}
