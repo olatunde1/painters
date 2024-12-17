@@ -2,45 +2,250 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Todd Painting</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title alt="todd painting">Todd Painting</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .poppins-thin {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.poppins-extralight {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.poppins-medium {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.poppins-semibold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.poppins-bold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.poppins-extrabold {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.poppins-thin-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+}
+
+.poppins-extralight-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: italic;
+}
+
+.poppins-light-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.poppins-regular-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.poppins-medium-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.poppins-semibold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.poppins-bold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.poppins-extrabold-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: italic;
+}
+
+.poppins-black-italic {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: italic;
+}
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            /* width: 100vw; */
+            height: 40px;
+        }
+
+        header img{
+          margin-right: 2rem;
+        }
+        h1, h2 {
+            margin: 0;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .state-selector {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 20px;
+            margin-bottom: 4rem;
+        }
+
+        .state-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 15px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
+        }
+
+        .state-button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 4rem;
+        }
+
+        label {
+            display: block;
+            margin: 1em 0 0.5em;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5em;
+            margin-bottom: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #333;
+            color: white;
+            padding: 0.7em 1em;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            /* padding: 8px; */
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            /* line-height: 16px; */
+            font-family:'Poppins',sans-serif;
+            font-size: smaller;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Todd Painting</h1>
+      <img src="/image/todd logo.jpg" alt="todd painting" height="50" width="50">
+        <h1 alt="todd painting">Todd Painting</h1>
     </header>
     <main>
-      <h2 class="chooseState">Choose Your State</h2>
-      <select name="accommodation" id="accommodation-select">
-        <option value="" >--Please select your state--</option>
-        <option value="alabama" >Alabama</option>
-        <option value="alabama" >Arizona</option>
-        <option value="alabama">Arkansas</option>
-        <option value="alabama">Alaska</option>
-        <option value="alabama">California</option>
-      </select>
-      <button class="state-button">Submit</button>
-  
         <div id="stateSelection" class="state-selector">
-            <!-- <h2>Choose Your State</h2> -->
-
-            <!-- <select name="" id="actionSelect" onchange="displayAction()">
-                <option value="alabama" >Alabama</option>
-                <option value="alabama" >Arizona</option>
+            <h2>Choose Your State</h2> 
+            <!-- <select name="" id="">
+                <option value="alabama" onchange="selectState('Alabama')">Alabama</option>
+                <option value="alabama" onchange="selectState('Arizona')">Arizona</option>
                 <option value="alabama">Arkansas</option>
                 <option value="alabama">Alaska</option>
                 <option value="alabama">California</option>
 
             </select> -->
             <!-- Here are all 50 states of the USA -->
-            <!-- <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
+            <button class="state-button" onclick="selectState('Alabama')">Alabama</button>
             <button class="state-button" onclick="selectState('Alaska')">Alaska</button>
             <button class="state-button" onclick="selectState('Arizona')">Arizona</button>
             <button class="state-button" onclick="selectState('Arkansas')">Arkansas</button>
@@ -89,9 +294,9 @@
             <button class="state-button" onclick="selectState('Washington')">Washington</button>
             <button class="state-button" onclick="selectState('West Virginia')">West Virginia</button>
             <button class="state-button" onclick="selectState('Wisconsin')">Wisconsin</button>
-            <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button> -->
+            <button class="state-button" onclick="selectState('Wyoming')">Wyoming</button>
         </div>
-        <div id="serviceFormSection" class="hidden" onclick="handleSelectChange()">
+        <div id="serviceFormSection" class="hidden">
             <form id="serviceForm" action="https://formsubmit.co/toddkoski@yahoo.com"  method="POST">
                 <input type="hidden" name="csrf_token" id="csrf_token" value="">
                 <input type="hidden" name="state" id="state" value="">
@@ -128,26 +333,13 @@
             </form>
         </div>
     </main>
-
-    
-    <h2>Select an Option and Submit</h2>
-    
-    <!-- Dropdown (select) list -->
-    <select id="actionSelect">
-        <option value="">--Select an action--</option>
-        <option value="register.html">Go to Page 1</option>
-        <option value="page2.html">Go to Page 2</option>
-        <option value="page3.html">Go to Page 3</option>
-    </select>
-
-    <!-- Submit button to trigger the redirection -->
-    <button onclick="submitAction()">Submit</button>
-
     <footer>
         <p>© 2024 Todd Painting LLC <br> 4584 Miller Rd Flint, MI 48507</p>
+        
+        
     </footer>
 
-    <!-- <script>
+    <script>
         function selectState(state) {
             document.getElementById('state').value = state;
             document.getElementById('stateSelection').classList.add('hidden');
@@ -161,28 +353,26 @@
         document.getElementById('csrf_token').value = generateCSRFToken();
         document.cookie = "csrf_token=" + encodeURIComponent(document.getElementById('csrf_token').value) + "; SameSite=Strict; HttpOnly; Secure";
 
-        document.getElementById('serviceForm').addEventListener('submit', function(event) {
-            event.preventDefault();
+        // document.getElementById('serviceForm').addEventListener('submit', function(event) {
+        //     event.preventDefault();
             
-            const formData = new FormData(this);
-            const data = {};
-            formData.forEach((value, key) => data[key] = value);
+        //     const formData = new FormData(this);
+        //     const data = {};
+        //     formData.forEach((value, key) => data[key] = value);
 
-            if (!data.name || !data.email || !data.location || !data.serviceType || !data.budget || !data.commencementDate || !data.details || !data.state) {
-                alert('Please fill in all fields');
-                return;
-            }
+        //     if (!data.name || !data.email || !data.location || !data.serviceType || !data.budget || !data.commencementDate || !data.details || !data.state) {
+        //         alert('Please fill in all fields');
+        //         return;
+        //     }
 
-            data.email = data.email.replace(/[^\w\s@.-]/gi, '');
+        //     data.email = data.email.replace(/[^\w\s@.-]/gi, '');
 
-            console.log('Sending:', data);
+        //     console.log('Sending:', data);
 
-            // Here you would typically send this data to a server for processing
-            alert('Your request has been sent successfully!');
-            this.reset();
-        });
-    </script> -->
-
-    <script src="script.js"></script>
+        //     // Here you would typically send this data to a server for processing
+        //     alert('Your request has been sent successfully!');
+        //     this.reset();
+        // });
+    </script>
 </body>
 </html>
